@@ -1,0 +1,7 @@
+#################### 不同环境配置切换 #####################
+#active配置dev就是使用application-dev.yml文件
+spring:
+  profiles:
+    active: test
+  application:
+    name: webmagic-crawler

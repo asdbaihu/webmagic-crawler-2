@@ -1,0 +1,16 @@
+#################### 测试环境 ##################################
+#################### 服务配置##################################
+server:
+  port: 1201
+  context-path: /${spring.application.name}
+  
+################### 数据库配置 ##########################
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/crawler   #?useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: root
+    password: 123456
+    
+    
+
