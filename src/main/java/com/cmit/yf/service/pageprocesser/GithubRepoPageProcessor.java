@@ -1,4 +1,4 @@
-package com.cmit.yf.service.pageProcesser;
+package com.cmit.yf.service.pageprocesser;
 
 import javax.net.ssl.SSLContext;
 
@@ -40,11 +40,12 @@ public class GithubRepoPageProcessor implements PageProcessor {
 	
 	public static void main(String[] args) {
         try {
-        	System.setProperty("javax.net.debug", "all"); //查看调试信息
-        	String url ="https://github.com/code4craft";
-        	SSLContext ctx = SSLContexts.custom().setProtocol("TLSv1.2").build();
-        	CloseableHttpClient httpclient=HttpClientBuilder.create().setSslcontext(ctx).build();;
-			Spider.create(new GithubRepoPageProcessor()).addUrl(url).thread(5).run();
+        	Spider.create(new GithubRepoPageProcessor()).addUrl("https://github.com/code4craft").thread(5).run();
+//        	System.setProperty("javax.net.debug", "all"); //查看调试信息
+//        	String url ="https://github.com/code4craft";
+//        	SSLContext ctx = SSLContexts.custom().setProtocol("TLSv1.2").build();
+//        	CloseableHttpClient httpclient=HttpClientBuilder.create().setSslcontext(ctx).build();;
+//			Spider.create(new GithubRepoPageProcessor()).addUrl(url).thread(5).run();
 			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
